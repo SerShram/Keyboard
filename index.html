@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Keyboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1> События клавиатуры</h1>
+        <section>
+            <h4>Задача.</h4>
+            <p> Дан input .i-11. Используя знания html и css нарисуйте клавиатуру (можно схематически).
+                Изображение должно содержать числа, символьные клавиши, пробел, enter, caps lock, shift, tab, alt. При
+                вводе текста в input в момент нажатия клавиши - затемняйте ее, в момент отпускания - возвращайте к
+                первоначальному состоянию. Аналогично при нажатии enter, space, alt, shift, ctrl. Затемнение реализуйте
+                через добавление класса CSS. Для удобства рекомендую каждой клавише добавить атрибут data с символом.
+                Если нажата клавиша caps lock - то присвоить ей затемнение, которое работает до последующего отжатия
+                клавиши.
+            </p>
+            <div>
+                <input type="text" class="inp" placeholder="Поле приема события клавиатуры">
+                <h4>Решение.</h4>
+                <div class="keyboard">
+                    <div class="row">
+                        <div class="item" data-code="Backquote">`</div>
+                        <div class="item" data-code="Digit1">1</div>
+                        <div class="item" data-code="Digit2">2</div>
+                        <div class="item" data-code="Digit3">3</div>
+                        <div class="item" data-code="Digit4">4</div>
+                        <div class="item" data-code="Digit5">5</div>
+                        <div class="item" data-code="Digit6">6</div>
+                        <div class="item" data-code="Digit7">7</div>
+                        <div class="item" data-code="Digit8">8</div>
+                        <div class="item" data-code="Digit9">9</div>
+                        <div class="item" data-code="Digit0">0</div>
+                        <div class="item" data-code="Minus">-</div>
+                        <div class="item" data-code="Equal">=</div>
+                        <div class="item" data-code="Backspace">Backspace</div>
+                    </div>
+                    <div class="row">
+                        <div class="item" data-code="Tab">Tab</div>
+                        <div class="item" data-code="KeyQ">q</div>
+                        <div class="item" data-code="KeyW">w</div>
+                        <div class="item" data-code="KeyE">e</div>
+                        <div class="item" data-code="KeyR">r</div>
+                        <div class="item" data-code="KeyT">t</div>
+                        <div class="item" data-code="KeyY">y</div>
+                        <div class="item" data-code="KeyU">u</div>
+                        <div class="item" data-code="KeyI">i</div>
+                        <div class="item" data-code="KeyO">o</div>
+                        <div class="item" data-code="KeyP">p</div>
+                        <div class="item" data-code="BracketLeft">[</div>
+                        <div class="item" data-code="BracketRight">]</div>
+                        <div class="item" data-code="Backslash">\</div>
+                    </div>
+                    <div class="row">
+                        <div class="item" data-code="CapsLock">CapsLock</div>
+                        <div class="item" data-code="KeyA">a</div>
+                        <div class="item" data-code="KeyS">s</div>
+                        <div class="item" data-code="KeyD">d</div>
+                        <div class="item" data-code="KeyF">f</div>
+                        <div class="item" data-code="KeyG">g</div>
+                        <div class="item" data-code="KeyH">h</div>
+                        <div class="item" data-code="KeyJ">j</div>
+                        <div class="item" data-code="KeyK">k</div>
+                        <div class="item" data-code="KeyL">l</div>
+                        <div class="item" data-code="Semicolon">;</div>
+                        <div class="item" data-code="Quote">'</div>
+                        <div class="item" data-code="Enter">Enter</div>
+                    </div>
+                    <div class="row">
+                        <div class="item item-shift" data-code="ShiftLeft">Shift</div>
+                        <div class="item" data-code="KeyZ">z</div>
+                        <div class="item" data-code="KeyX">x</div>
+                        <div class="item" data-code="KeyC">c</div>
+                        <div class="item" data-code="KeyV">v</div>
+                        <div class="item" data-code="KeyB">b</div>
+                        <div class="item" data-code="KeyN">n</div>
+                        <div class="item" data-code="KeyM">m</div>
+                        <div class="item" data-code="Comma">,</div>
+                        <div class="item" data-code="Period">.</div>
+                        <div class="item" data-code="Slash">/</div>
+                        <div class="item item-shift" data-code="ShiftRight">Shift</div>
+                    </div>
+                    <div class="row">
+                        <div class="item" data-code="ControlLeft">Ctrl</div>
+                        <div class="item" data-code="MetaLeft">
+                            <img src="img/meta.png" alt="">
+                        </div>
+                        <div class="item" data-code="AltLeft">Alt</div>
+                        <div class="item item-space" data-code="Space">Space</div>
+                        <div class="item" data-code="AltRight">Alt</div>
+                        <div class="item" data-code="MetaRight">
+                            <img src="img/meta.png" alt="">
+                        </div>
+                        <div class="item" data-code="ContextMenu">ContMenu</div>
+                        <div class="item" data-code="ControlRight">Ctrl</div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
